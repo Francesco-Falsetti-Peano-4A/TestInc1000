@@ -17,14 +17,14 @@ public class Inc1000 extends Thread {
     static int count;
 
     @Override
-    public void run() {
+   public void run() {
         for (int i = 0; i < 1000; i++) {
-            count += 1;
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Inc1000.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            inc1();
+            
         }
+    }
+    
+    synchronized void inc1() {
+        count++;
     }
 }
