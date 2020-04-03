@@ -12,7 +12,4 @@ Uguale al primo esercizio ma con l'aggiunta del metodo join() nel main.
 Come risultato abbiamo ricevuto un numero più alto compreso tra 1000 e 2000, questo perchè tramite il metodo join() i thread cercavano di non sovrapporre il valore del contatore ma con un discreto risultato.
 
 Terza parte dell'esercizio:
-Come ultimo cambiamento in modo tale da far funzionare correttamente il programma, oltre ad aver messo prima il metodo start() e poi il metodo join(), abbiamo cambiato il codice all'interno del ciclio della funzione run():
-Abbiamo chiamato una fuzione di nome inc1 che incrementava il contatore.
-Tutto questo per far lavorare i due thread in modo parallelo ma senza sovrascrivere il valore del contatore.
-Il risultato è stato di 2000.
+A differenza della seconda parte, nella classe in cui sono presenti i due threads, l'incremento della variabile avviene in un metodo a parte, ovvero il metodo synchronized(), di tipo void e che viene chiamato all'interno del metodo run() in cui viene eseguito il codice dei due threads. synchronized ha il compito appunto di sincronizzare l'esecuzione dei due threads, la quale risorsa comune (ovvero la variabile), viene incrementata da entrambi velocemente, in modo tale da neutralizzare ogni probabilità di conflitto.
