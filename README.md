@@ -5,7 +5,7 @@ Dopo aver creato il costruttore abbiamo aggiunto la funzione run, al cui interno
 Dentro al ciclo implementavamo di uno il contatore e successivamente davamo un tempo di sospensione (sleep) di un secondo.
 Nel main abbiamo istanziato due oggetti dello stesso tipo (Inc1000); dopo di che abbiamo aggiunto per ognuno dei due il metodo start().
 L'output ricevuto è stato zero.
-Questo perchè avendo una variabile comune (statica), i due oggetti sovrascrivevano il valore della variabile statica senza mai incrementare il contatore.
+Questo perchè il main terminava prima rispetto al tempo di incrementazione della variabile statica.
 
 Seconda parte dell'esercizio:
 Uguale al primo esercizio ma con l'aggiunta del metodo join() nel main.
